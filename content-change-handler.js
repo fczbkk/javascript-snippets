@@ -69,19 +69,19 @@ window.addEventListener('load', function () {
     
     // Be sure to initialize after document is loaded, when you use
     // document.body as a watched element.
-    var myListener = new ContentChangeHandler(null, function () {
+    var myListener = new ContentChangeHandler(function () {
         console.log('Document content has changed.');
     });
 
     // Custom options example. This will only watch element #myElement every
     // 10 seconds.
     var myOtherListener = new ContentChangeHandler(
+        function () {
+            console.log('My element has changes. Yeah!');
+        },
         {
             element : document.getElementById('myElement'),
             frequency : 1000 * 10
-        },
-        function () {
-            console.log('My element has changes. Yeah!');
         }
     );
 
