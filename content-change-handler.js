@@ -12,7 +12,7 @@ changes periodicaly, every few seconds, firing the callback only when there were
 actual changes. And that worked like a charm.
 */
 
-function ContentChangeHandler (options, callback) {
+function ContentChangeHandler (callback, options) {
     
     // If no callback is provided, an empty function will be used. This doesn't
     // really make sense, but I guess you could setup the object and add or
