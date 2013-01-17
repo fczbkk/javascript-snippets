@@ -8,7 +8,7 @@ function convertTxtToXml(text, callback) {
     callback = callback || function () {};
 
     var parser = new DOMParser();
-    var doc = parser.parseFromString(options.text, "application/xml");
+    var doc = parser.parseFromString(text, "application/xml");
 
     callback(doc);
     return doc;    
